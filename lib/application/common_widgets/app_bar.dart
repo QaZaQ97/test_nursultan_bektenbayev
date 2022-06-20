@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:test_nursultan_bektenbayev/constants/colors.dart';
-import 'package:test_nursultan_bektenbayev/constants/text_styles.dart';
+import 'package:test_nursultan_bektenbayev/application/constants/colors.dart';
+import 'package:test_nursultan_bektenbayev/application/constants/text_styles.dart';
 
 class MainAppBar extends StatelessWidget {
   String? title;
   bool arrowBackIcon;
   bool shareIcon;
-  MainAppBar(this.title, this.arrowBackIcon, this.shareIcon);
+  MainAppBar(this.title, this.arrowBackIcon, this.shareIcon, {Key? key})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,7 @@ class MainAppBar extends StatelessWidget {
         height: 120,
         child: SafeArea(
           child: Scaffold(
-              backgroundColor: Colors.red,
+              backgroundColor: black,
               body: Row(children: [
                 showArrowIcon
                     ? IconButton(
